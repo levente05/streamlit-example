@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-# Példa adatok létrehozása
 data = {'Név': ['John', 'Jane', 'Bob', 'Alice'],
         'Életkor': [25, 30, 22, 28],
         'Város': ['New York', 'San Francisco', 'Los Angeles', 'Chicago']}
