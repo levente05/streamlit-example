@@ -8,5 +8,5 @@ data = {'Név': ['John', 'Jane', 'Bob', 'Alice'],
 df = pd.DataFrame(data)
 
 # Streamlit alkalmazás kódja
-st.title('Példa táblázat Streamlit-ben')
+
 st.dataframe(df)
