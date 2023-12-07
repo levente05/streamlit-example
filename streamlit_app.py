@@ -12,7 +12,4 @@ df = pd.DataFrame(data)
 st.dataframe(df)"""
 
 
-def show_contact_form():
-
-if user send contact form == True:
-         def upload_file_function():
+RUN echo '[general]\nemail = "a@a.a"' > /root/.streamlit/credentials.toml
