@@ -25,7 +25,7 @@ def main():
 
     age = st.number_input("Kérlek, add meg az életkorod:", min_value=0, max_value=150)    
 
-    nem = st.button("Férfi") ("/") st.button("Nő")
+    gender = st.radio("Kérlek, válassz nemet:", ["Férfi", "Nő", "Egyéb"])
     # Elküld gomb
     if st.button("Elküld"):
         if name and email:
