@@ -23,6 +23,8 @@ def main():
     # E-mail cím bekérése
     email = st.text_input("Kérlek, add meg az e-mail címed:")
 
+    age = st.number_input("Kérlek, add meg az életkorod:", min_value=0, max_value=150)    
+
     # Elküld gomb
     if st.button("Elküld"):
         if name and email:
@@ -30,8 +32,9 @@ def main():
             st.success(f"Köszönjük, {name}! Az e-mail címed: {email}. Az adatokat elmentettük.")
         else:
             st.error("Kérlek, töltsd ki mindkét mezőt!")
+                
 
-def save_to_file(name, email):
+def save_to_file(name, email,age):
     with open("adatok.txt", "a") as file:
         file.write(f"Név: {name}, E-mail: {email}\n")
 
