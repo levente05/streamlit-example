@@ -27,17 +27,16 @@ def main():
 
     gender = st.radio("Kérlek, válassz nemet:", ["Férfi", "Nő", "Egyéb"])
     # Elküld gomb
-    if st.button("Elküld"):
-        if name and email:
-            save_to_file(name, email)
-            st.success(f"Köszönjük, {name}! Az e-mail címed: {email}. Az adatokat elmentettük.")
+   if st.button("Elküld"):
+        if name and email and age is not None and gender:
+            save_to_file(name, email, age, gender)
+            st.success(f"Köszönjük, {name}! Az e-mail címed: {email}, Életkorod: {age}, Nemed: {gender}. Az adatokat elmentettük.")
         else:
-            st.error("Kérlek, töltsd ki mindkét mezőt!")
-                
+            st.error("Kérlek, töltsd ki az összes mezőt!")
 
-def save_to_file(name, email,age):
+def save_to_file(name, email, age, gender):
     with open("adatok.txt", "a") as file:
-        file.write(f"Név: {name}, E-mail: {email}\n")
+        file.write(f"Név: {name}, E-mail: {email}, Életkor: {age}, Nem: {gender}\n")
 
 if __name__ == "__main__":
     main()
