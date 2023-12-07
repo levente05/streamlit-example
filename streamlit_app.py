@@ -26,9 +26,14 @@ def main():
     # Elküld gomb
     if st.button("Elküld"):
         if name and email:
-            st.success(f"Köszönjük, {name}! Az e-mail címed: {email}")
+            save_to_file(name, email)
+            st.success(f"Köszönjük, {name}! Az e-mail címed: {email}. Az adatokat elmentettük.")
         else:
             st.error("Kérlek, töltsd ki mindkét mezőt!")
+
+def save_to_file(name, email):
+    with open("adatok.txt", "a") as file:
+        file.write(f"Név: {name}, E-mail: {email}\n")
 
 if __name__ == "__main__":
     main()
