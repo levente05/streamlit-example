@@ -15,7 +15,7 @@ st.dataframe(df)"""
 import streamlit as st
 
 def main():
-    st.title("E-mail Bekérés")
+    st.title("Enginek")
 
     # Felhasználó nevének bekérése
     name = st.text_input("Kérlek, add meg a neved:")
