@@ -27,7 +27,7 @@ def main():
 
     gender = st.selectbox("Kérlek, válassz nemet:", ["Férfi", "Nő", "Egyéb"])
     # Elküld gomb
-   if st.button("Elküld"):
+     if st.button("Elküld"):
         if name and email and age is not None and gender:
             save_to_file(name, email, age, gender)
             st.success(f"Köszönjük, {name}! Az e-mail címed: {email}, Életkorod: {age}, Nemed: {gender}. Az adatokat elmentettük.")
