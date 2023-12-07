@@ -25,6 +25,7 @@ def main():
 
     age = st.number_input("Kérlek, add meg az életkorod:", min_value=0, max_value=150)    
 
+    nem = st.text_input("Kérlek, add meg a nemed:")
     # Elküld gomb
     if st.button("Elküld"):
         if name and email:
