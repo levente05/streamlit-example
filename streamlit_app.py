@@ -12,4 +12,23 @@ df = pd.DataFrame(data)
 st.dataframe(df)"""
 
 
-RUN echo '[general]\nemail = "a@a.a"' > /root/.streamlit/credentials.toml
+import streamlit as st
+
+def main():
+    st.title("E-mail Bekérés")
+
+    # Felhasználó nevének bekérése
+    name = st.text_input("Kérlek, add meg a neved:")
+
+    # E-mail cím bekérése
+    email = st.text_input("Kérlek, add meg az e-mail címed:")
+
+    # Elküld gomb
+    if st.button("Elküld"):
+        if name and email:
+            st.success(f"Köszönjük, {name}! Az e-mail címed: {email}")
+        else:
+            st.error("Kérlek, töltsd ki mindkét mezőt!")
+
+if __name__ == "__main__":
+    main()
